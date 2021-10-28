@@ -2,7 +2,7 @@ package com.mycompany.stringapi.dto;
 
 public class Statistics {
 
-    public boolean isAlpha;
+    public boolean isWord;
     public boolean isNumber;
     public boolean isLower;
     public boolean isUpper;

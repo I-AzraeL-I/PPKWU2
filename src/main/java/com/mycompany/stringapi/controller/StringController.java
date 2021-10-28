@@ -15,9 +15,9 @@ public class StringController {
         this.stringService = stringService;
     }
 
-    @GetMapping("/is-alpha")
+    @GetMapping("/is-word")
     public ResponseEntity<Boolean> isAlpha(@RequestParam("data") String data) {
-        return ResponseEntity.ok(stringService.isAlpha(data));
+        return ResponseEntity.ok(stringService.isWord(data));
     }
 
     @GetMapping("/is-number")

@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class StringService {
 
-    public boolean isAlpha(String data) {
-        return data.chars().allMatch(Character::isAlphabetic);
+    public boolean isWord(String data) {
+        return data.chars().allMatch(Character::isLetter);
     }
 
     public boolean isNumber(String data) {
@@ -29,7 +29,7 @@ public class StringService {
 
     public Statistics createStatistics(String data) {
         var statistics = new Statistics();
-        statistics.isAlpha = isAlpha(data);
+        statistics.isWord = isWord(data);
         statistics.isLower = isLower(data);
         statistics.isNumber = isNumber(data);
         statistics.isUpper = isUpper(data);
