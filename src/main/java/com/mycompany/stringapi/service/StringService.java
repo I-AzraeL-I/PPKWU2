@@ -21,4 +21,8 @@ public class StringService {
     public boolean isLower(String data) {
         return data.chars().allMatch(Character::isLowerCase);
     }
+
+    public boolean isUpper(String data) {
+        return data.chars().allMatch(Character::isUpperCase);
+    }
 }

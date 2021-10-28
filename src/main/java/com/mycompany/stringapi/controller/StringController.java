@@ -31,4 +31,9 @@ public class StringController {
     public ResponseEntity<Boolean> isLower(@RequestParam("data") String data) {
         return ResponseEntity.ok(stringService.isLower(data));
     }
+
+    @PostMapping("/is-upper")
+    public ResponseEntity<Boolean> isUpper(@RequestParam("data") String data) {
+        return ResponseEntity.ok(stringService.isUpper(data));
+    }
 }
