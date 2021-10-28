@@ -2,10 +2,7 @@ package com.mycompany.stringapi.controller;
 
 import com.mycompany.stringapi.service.StringService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -17,22 +14,22 @@ public class StringController {
         this.stringService = stringService;
     }
 
-    @PostMapping("/is-alpha")
+    @GetMapping("/is-alpha")
     public ResponseEntity<Boolean> isAlpha(@RequestParam("data") String data) {
         return ResponseEntity.ok(stringService.isAlpha(data));
     }
 
-    @PostMapping("/is-number")
+    @GetMapping("/is-number")
     public ResponseEntity<Boolean> isNumber(@RequestParam("data") String data) {
         return ResponseEntity.ok(stringService.isNumber(data));
     }
 
-    @PostMapping("/is-lower")
+    @GetMapping("/is-lower")
     public ResponseEntity<Boolean> isLower(@RequestParam("data") String data) {
         return ResponseEntity.ok(stringService.isLower(data));
     }
 
-    @PostMapping("/is-upper")
+    @GetMapping("/is-upper")
     public ResponseEntity<Boolean> isUpper(@RequestParam("data") String data) {
         return ResponseEntity.ok(stringService.isUpper(data));
     }
