@@ -17,4 +17,8 @@ public class StringService {
         }
         return true;
     }
+
+    public boolean isLower(String data) {
+        return data.chars().allMatch(Character::isLowerCase);
+    }
 }

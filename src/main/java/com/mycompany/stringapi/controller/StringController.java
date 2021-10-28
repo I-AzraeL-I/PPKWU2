@@ -26,4 +26,9 @@ public class StringController {
     public ResponseEntity<Boolean> isNumber(@RequestParam("data") String data) {
         return ResponseEntity.ok(stringService.isNumber(data));
     }
+
+    @PostMapping("/is-lower")
+    public ResponseEntity<Boolean> isLower(@RequestParam("data") String data) {
+        return ResponseEntity.ok(stringService.isLower(data));
+    }
 }
