@@ -21,4 +21,9 @@ public class StringController {
     public ResponseEntity<Boolean> isAlpha(@RequestParam("data") String data) {
         return ResponseEntity.ok(stringService.isAlpha(data));
     }
+
+    @PostMapping("/is-number")
+    public ResponseEntity<Boolean> isNumber(@RequestParam("data") String data) {
+        return ResponseEntity.ok(stringService.isNumber(data));
+    }
 }
