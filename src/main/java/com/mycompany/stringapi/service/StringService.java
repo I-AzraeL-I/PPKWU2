@@ -11,7 +11,7 @@ public class StringService {
 
     public boolean isNumber(String data) {
         try {
-            double number = Double.parseDouble(data);
+            Double.parseDouble(data);
         } catch (NumberFormatException e) {
             return false;
         }
