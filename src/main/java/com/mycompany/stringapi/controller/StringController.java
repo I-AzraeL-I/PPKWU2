@@ -1,5 +1,6 @@
 package com.mycompany.stringapi.controller;
 
+import com.mycompany.stringapi.dto.Statistics;
 import com.mycompany.stringapi.service.StringService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,5 +33,10 @@ public class StringController {
     @GetMapping("/is-upper")
     public ResponseEntity<Boolean> isUpper(@RequestParam("data") String data) {
         return ResponseEntity.ok(stringService.isUpper(data));
+    }
+
+    @GetMapping("/statistics")
+    public ResponseEntity<Statistics> getStatistics(@RequestParam("data") String data) {
+        return ResponseEntity.ok(stringService.createStatistics(data));
     }
 }
